@@ -2,6 +2,8 @@ CREATE DATABASE IF NOT EXISTS lab_mysql;
 
 USE lab_mysql;
 
+DROP TABLE IF EXISTS cars;
+
 CREATE TABLE cars (
 id INT NOT NULL AUTO_INCREMENT,
 vin CHAR(17) NOT NULL,
@@ -11,6 +13,8 @@ year_of_fabrication YEAR,
 color VARCHAR(25),
 PRIMARY KEY (id)
 );
+
+DROP TABLE IF EXISTS customers;
 
 CREATE TABLE customers (
 id INT NOT NULL AUTO_INCREMENT,
@@ -26,6 +30,8 @@ zip_postal_code CHAR(8),
 PRIMARY KEY (id)
 );
 
+DROP TABLE IF EXISTS salespersons;
+
 CREATE TABLE salespersons (
 id INT NOT NULL AUTO_INCREMENT,
 staff_id CHAR(8) UNIQUE,
@@ -33,6 +39,8 @@ salespersons_name VARCHAR(25) NOT NULL,
 store VARCHAR(25),
 PRIMARY KEY (id)
 );
+
+DROP TABLE IF EXISTS invoices;
 
 CREATE TABLE invoices (
 id INT NOT NULL AUTO_INCREMENT,
